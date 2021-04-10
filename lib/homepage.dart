@@ -26,8 +26,8 @@ class HomePage extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Image.asset("assets/images/IMG_20210317_113222.jpg",
-                    fit: BorderRadius(),
+                  Image.asset("assets/images/0001 (2).jpg",
+                    fit: BoxFit.contain,
                   ),
                   Text("Rubbish Scanner"),
           ],

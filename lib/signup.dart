@@ -70,7 +70,7 @@ class SignUpPage extends StatelessWidget {
                   minWidth: double.infinity,
                   height: 60,
                   onPressed: () {},
-                  color: Color(0xff0095FF),
+                  color: Colors.lightGreen[200],
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50),
@@ -101,18 +101,10 @@ class SignUpPage extends StatelessWidget {
                   )
                 ],
               )
-
-
-
             ],
-
           ),
-
-
         ),
-
       ),
-
     );
   }
 }
@@ -129,7 +121,6 @@ Widget inputFile({label, obscureText = false})
             fontWeight: FontWeight.w400,
             color:Colors.black87
         ),
-
       ),
       SizedBox(
         height: 5,
@@ -143,7 +134,6 @@ Widget inputFile({label, obscureText = false})
               borderSide: BorderSide(
                   color: Colors.grey[400]
               ),
-
             ),
             border: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey[400])

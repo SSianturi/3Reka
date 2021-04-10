@@ -13,12 +13,23 @@ void  main (){
 class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
+    return Stack(
+        children:[
+          Container(
+    decoration: BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage("assets/images/0002.jpg"),
+        fit: BoxFit.cover,
+        ),
+      ),
+    ),
+      Scaffold(
+        backgroundColor: Colors.transparent,
+        body: SafeArea(
         child: Container(
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -27,6 +38,7 @@ class FirstPage extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Welcome Back to 3Reka",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30,
@@ -37,7 +49,7 @@ class FirstPage extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    "Helping You Creating An Impact",
+                    "Together We Create An Impact",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.green[300],
@@ -51,7 +63,7 @@ class FirstPage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 5,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/IMG_20210317_113222.jpg")
+                        image: AssetImage("assets/images/0001 (2).jpg")
                     )
                 ),
               ),
@@ -102,6 +114,7 @@ class FirstPage extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ),
+    ]);
   }
 }

@@ -4,9 +4,17 @@ import 'package:threereka_tia/homepage.dart';
 class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Stack(
+        children:[
+          Container(
+    decoration: BoxDecoration(
+    image: DecorationImage(
+        image: AssetImage("assets/images/0002.jpg"),
+    fit: BoxFit.cover,
+    ),
+    ),
+    ),Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
         brightness: Brightness.light,
@@ -117,11 +125,11 @@ class SignInPage extends StatelessWidget {
 
                   Container(
                   padding: EdgeInsets.only(top: 100),
-                  height: 200,
+                  height: 150,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/images/IMG_20210317_113222.jpg"),
-                        fit: BoxFit.fitHeight
+                        image: AssetImage("assets/images/0001 (2).jpg"),
+                        fit: BoxFit.scaleDown
                     ),
 
                   ),
@@ -134,7 +142,8 @@ class SignInPage extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ),
+        ]);
   }
 
 }
