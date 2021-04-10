@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:threereka_tia/camerascreen.dart';
+import 'package:camera/camera.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -25,15 +27,18 @@ class HomePage extends StatelessWidget {
           child: (
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Image.asset("assets/images/0001 (2).jpg",
-                    fit: BoxFit.contain,
-                  ),
-                  Text("Rubbish Scanner"),
-          ],
-          )),
-        ),
-          )
-    );
+                children: [GestureDetector(
+              onTap: (){
+                (Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => TakePictureScreen())));
+              },
+              child: (
+              (Image.asset("assets/images/0001 (2).jpg",
+                    fit: BoxFit.cover))),
+    ),
+    ],
+    )),
+      )
+    ));
   }
 }
